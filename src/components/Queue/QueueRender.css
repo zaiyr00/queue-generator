@@ -1,0 +1,160 @@
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.queue__render {
+	display: flex;
+}
+
+.queue {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	width: 370px;
+	height: 160px;
+	border: 2px solid red;
+	position: relative;
+	border-radius: 5px;
+}
+
+.queue2 {
+	display: flex;
+	flex-direction: column;
+	width: 370px;
+	height: 160px;
+	color: #000;
+	background-color: white;
+	border: 4px solid rgb(25, 248, 36);
+	position: relative;
+	border-radius: 5px;
+}
+
+.queue3 {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	background-color: white;
+	width: 370px;
+	height: 160px;
+	border: 2px solid #2a3542;
+	position: relative;
+	border-radius: 5px;
+
+	margin-top: 20px;
+}
+
+
+
+
+/*Delete button*/
+
+.close-container{
+	position: absolute;
+	top: 0;
+	left: 12px;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+  }
+  
+  .leftright{
+	height: 4px;
+	width: 35px;
+	position: absolute;
+	margin-top: 24px;
+	background-color: #F4A259;
+	border-radius: 2px;
+	transform: rotate(45deg);
+	transition: all .3s ease-in;
+  }
+  
+  .rightleft{
+	height: 4px;
+	width: 35px;
+	position: absolute;
+	margin-top: 24px;
+	background-color: #F4A259;
+	border-radius: 2px;
+	transform: rotate(-45deg);
+	transition: all .3s ease-in;
+  }
+  
+  .close-container label{
+	color: #2a3542;
+	font-family: Helvetica, Arial, sans-serif; 
+	font-size: .6em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: all .3s ease-in;
+	opacity: 0;
+  }
+  .close{
+	margin-top: 50px;
+	margin-left: -10px;
+	position: absolute;
+	color: #2a3542;
+  }
+  
+  .close-container:hover .leftright{
+	transform: rotate(-45deg);
+	background-color: #F25C66;
+  }
+  .close-container:hover .rightleft{
+	transform: rotate(45deg);
+	background-color: #F25C66;
+  }
+  .close-container:hover label{
+	opacity: 1;
+  }
+  
+.queue__checker {
+	color: black;
+	border: 4px solid #DAD7CF;
+	background-color: #DAD7CF;
+	width: 290px;
+	margin: 0 auto;
+	font-weight: 700;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 80px;
+	left: 40px;
+}
+
+.queue__person-logo {
+	margin: 0 auto;
+}
+
+
+.queues {
+	display: flex;
+	justify-content: center;
+	padding: 20px 0;
+	/* padding-right: -40px; */
+}
+
+.queue:hover {
+	background-color: rgba(255, 0, 0, 0.452);
+}
+
+.queue2:hover {
+	background-color: rgba(0, 255, 179, 0.452);
+}
+
+
+
+img {
+	width: 60px;
+	height: 60px;
+}
+
+@media screen and (max-width: 450px){
+	.queue, .queue2, .queue3{
+		width: 300px;
+	}
+	.queue__checker {
+		width: 270px;
+		left: 15px;
+	}
+}

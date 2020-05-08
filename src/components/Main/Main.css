@@ -1,0 +1,228 @@
+.mobile-menu {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  z-index: 9999999;
+}
+.mobile-menu__btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  z-index: 999999999;
+  height: 30px;
+  cursor: pointer;
+  transition: .4s;
+}
+.mobile-menu__icon {
+  display: block;
+  position: relative;
+  background: white;
+  width: 90%;
+  height: 4px;
+  transition: .4s;
+}
+.mobile-menu__icon::after, .mobile-menu__icon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: white;
+  width: 100%;
+  height: 4px;
+  transition: .4s;
+}
+.mobile-menu__icon::after {
+  top: 8px;
+}
+.mobile-menu__icon::before {
+  top: -8px;
+}
+.mobile-menu__container {
+  position: fixed;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: 0;
+  opacity: 1;
+  transition: .5s;
+  overflow: hidden;
+  background-color:grey;
+}
+.footer-menu__container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 40px;
+  bottom: 0;
+  background-attachment: fixed;
+  background-size: cover;
+  right: 0;
+  left: 0;
+  height: 8%;
+  z-index: 999999;
+}
+.mobile-menu__list {
+  transition: .5s;
+  list-style: none;
+  padding-left: 0;
+  margin-top: -50px;
+}
+.footer-menu__list {
+  margin: 5px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 40px;
+  bottom: 0;
+  background-attachment: fixed;
+  background-size: cover;
+  right: 0;
+  left: 0;
+  height: 5%;
+  z-index: 999999;
+  list-style: none;
+}
+.mobile-menu__item {
+  font-size: 26px;
+  padding-bottom: 15px;
+}
+.footer-menu__item {
+  margin: 7px;
+}
+.mobile-menu__link {
+  text-decoration: none;
+  color: #fff;
+}
+.footer-menu__link {
+  text-decoration: none;
+  color: #fff;
+}
+.mobile-menu__checkbox {
+  display: none;
+}
+.mobile-menu__checkbox:checked ~ .mobile-menu__nav {
+  opacity: 1;
+}
+.mobile-menu__checkbox:checked ~ .mobile-menu__container {
+  height: 100%;
+}
+.mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon {
+  background: transparent;
+}
+.mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::before, .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::after {
+  top: 0;
+}
+.mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::before {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.body {
+
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: 100%;
+  opacity: 1;
+  overflow: hidden;
+  background-color: black;
+}
+h1 {
+  padding: 10px;
+}
+h4 {
+  margin: 20px;
+}
+.body_button {
+  font-size: 80%;
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px 30px;
+  margin: 20px 30px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right,#4CAF50, rgb(82, 245, 104) 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0,0,0,.1);
+  transition: .5s;
+}
+.body_button:hover {
+  background-position:right center;
+}
+/* .body_button:active { 
+  
+  color: rgb(51,51,51);
+  border: 3px solid rgb(204,204,204);
+  background: rgb(238,238,238) linear-gradient(rgb(238,238,238), rgb(224,224,224));
+  box-shadow: 0 2px 4px rgba(0,0,0,.1) inset;
+}*/
+
+.body_text {
+  font-size: 25px;
+  color:white;
+  width: 90%;
+  z-index: 9999;
+}
+hr {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+margin: 20px;
+  border: none; /* Убираем границу */
+  background-color:white; /* Цвет линии */
+  height: 1px;
+  width: 30%;
+}
+.body_background {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  opacity:0.3;
+  background-position:center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url(../../img/qr_photo_scan1.jpg);
+  background-repeat: no-repeat;
+  background-color:black;
+}
+
